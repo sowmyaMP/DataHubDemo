@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\SpecFlow.Tools.MsBuild.Generation.2.3.2\build\SpecFlow.Tools.MsBuild.Generation.props" Condition="Exists('packages\SpecFlow.Tools.MsBuild.Generation.2.3.2\build\SpecFlow.Tools.MsBuild.Generation.props')" />
+  <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.2.3.2\build\SpecFlow.Tools.MsBuild.Generation.props" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.2.3.2\build\SpecFlow.Tools.MsBuild.Generation.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F632DDF-8F9A-4B0B-B13E-B200417C4E1A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataHubDemo</RootNamespace>
+    <AssemblyName>DataHubDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>packages\SpecFlow.Plus.Excel.2-3-0.1.7.3\tools\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>packages\SpecFlow.Plus.Excel.2-3-0.1.7.3\tools\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Gherkin">
+      <HintPath>packages\SpecFlow.Plus.Excel.2-3-0.1.7.3\tools\Gherkin.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter">
+      <HintPath>..\..\..\..\AAT_Datahub\AAT_Datahub\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices">
+      <HintPath>..\..\..\..\AAT_Datahub\AAT_Datahub\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface">
+      <HintPath>..\..\..\..\AAT_Datahub\AAT_Datahub\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework">
+      <HintPath>..\..\..\..\AAT_Datahub\AAT_Datahub\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions">
+      <HintPath>..\..\..\..\AAT_Datahub\AAT_Datahub\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="NConsoler">
+      <HintPath>packages\SpecFlow.Plus.Excel.2-3-0.1.7.3\tools\NConsoler.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\SpecFlow.Plus.Excel.2-3-0.1.7.3\tools\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.3.0.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SeleniumExtras.PageObjects, Version=3.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetSeleniumExtras.PageObjects.Core.3.11.2\lib\net45\SeleniumExtras.PageObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecFlow.Plus.Excel">
+      <HintPath>packages\SpecFlow.Plus.Excel.2-3-0.1.7.3\tools\SpecFlow.Plus.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SpecFlow.Plus.Excel.SpecFlowPlugin">
+      <HintPath>packages\SpecFlow.Plus.Excel.2-3-0.1.7.3\tools\SpecFlow.Plus.Excel.SpecFlowPlugin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SpecRun.SpecFlowPlugin">
+      <HintPath>packages\SpecRun.SpecFlow.2-3-0.1.7.1\lib\net45\SpecRun.SpecFlowPlugin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StyleCop">
+      <HintPath>packages\StyleCop.5.0.0\lib\net40\StyleCop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple">
+      <HintPath>packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>packages\SpecFlow.Plus.Excel.2-3-0.1.7.3\tools\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TechTalk.SpecFlow.Generator">
+      <HintPath>packages\SpecFlow.Plus.Excel.2-3-0.1.7.3\tools\TechTalk.SpecFlow.Generator.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TechTalk.SpecFlow.Parser">
+      <HintPath>packages\SpecFlow.Plus.Excel.2-3-0.1.7.3\tools\TechTalk.SpecFlow.Parser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TechTalk.SpecFlow.Utils, Version=2.3.2.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>packages\SpecFlow.CustomPlugin.2.3.2\lib\net45\TechTalk.SpecFlow.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="TechTalk.SpecRun">
+      <HintPath>packages\SpecRun.SpecFlow.2-3-0.1.7.1\lib\net45\TechTalk.SpecRun.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TechTalk.SpecRun.Common">
+      <HintPath>packages\SpecRun.SpecFlow.2-3-0.1.7.1\lib\net45\TechTalk.SpecRun.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.WebDriver.3.11.2\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>packages\Selenium.Support.3.11.0\lib\net45\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Driver.cs" />
+    <Compile Include="Configuration\ExtensionMethods.cs" />
+    <Compile Include="Configuration\Startup.cs" />
+    <Compile Include="Configuration\Wait.cs" />
+    <Compile Include="Datahub\ICompanyViewUse.cs" />
+    <Compile Include="Datahub\IHome.cs" />
+    <Compile Include="Datahub\ILocationCreate.cs" />
+    <Compile Include="Datahub\ILocationManage.cs" />
+    <Compile Include="Datahub\IExportProducts.cs" />
+    <Compile Include="Datahub\IProductCreate.cs" />
+    <Compile Include="Datahub\IProductManage.cs" />
+    <Compile Include="Datahub\IProductViewUse.cs" />
+    <Compile Include="Features\Modules\Product\ProductViewUseFeature.feature.cs">
+      <DependentUpon>ProductViewUseFeature.feature</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Pages\Common\CompanyCommonPage.cs" />
+    <Compile Include="Pages\Common\LocationCommonPage.cs" />
+    <Compile Include="Pages\Common\ProductCommonPage.cs" />
+    <Compile Include="Pages\Main\BasePage.cs" />
+    <Compile Include="Pages\Modules\Company\CompanyViewUsePage.cs" />
+    <Compile Include="Pages\Modules\Product\ExportProductsPage.cs" />
+    <Compile Include="Pages\Common\HomePage.cs" />
+    <Compile Include="Pages\Modules\Location\LocationCreatePage.cs" />
+    <Compile Include="Pages\Modules\Location\LocationManagePage.cs" />
+    <Compile Include="Pages\Modules\Product\ProductCreatePage.cs" />
+    <Compile Include="Pages\Modules\Product\ProductManagePage.cs" />
+    <Compile Include="Pages\Modules\Product\ProductViewUsePage.cs" />
+    <Compile Include="Pages\StepDefinition1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Steps\Common\CommonSteps.cs" />
+    <Compile Include="Steps\Modules\Company\CompanyViewUseSteps.cs" />
+    <Compile Include="Steps\Modules\Product\Class1.cs" />
+    <Compile Include="Steps\Modules\Product\ExportProductsSteps.cs" />
+    <Compile Include="Steps\Modules\Location\LocationCreateSteps.cs" />
+    <Compile Include="Steps\Modules\Product\ProductCreateSteps.cs" />
+    <Compile Include="Steps\Modules\Product\ProductViewUseSteps.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datahub\ProductViewUSeExamples1.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Default.srprofile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\Modules\Product\ProductViewUSeExamples.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Features\Modules\Product\ProductViewUseFeature.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ProductViewUseFeature.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="runtests.cmd" />
+    <None Include="Sample.runsettings" />
+    <None Include="SpecRunTestProfile.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpecRunTestProfile_2011_09.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TestVariables\ApplicatonVariables\ApplicationDataHubVariables.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DriverSet\chromedriver.exe" />
+    <Content Include="DriverSet\geckodriver.exe" />
+    <Content Include="DriverSet\IEDriverServer.exe" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\SpecFlow.2.3.2\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.3.2\build\SpecFlow.targets')" />
+  <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.2.3.2\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.2.3.2\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
+  <Import Project="packages\SpecFlow.2.3.2\build\SpecFlow.targets" Condition="Exists('packages\SpecFlow.2.3.2\build\SpecFlow.targets')" />
+  <Import Project="packages\SpecFlow.Tools.MsBuild.Generation.2.3.2\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('packages\SpecFlow.Tools.MsBuild.Generation.2.3.2\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
+</Project>
